@@ -135,6 +135,7 @@ class ResultScreen: ViewController {
             resultValueLbl.text = String(format: "%.1f", result)
             rangeModeLbl.text = "Super Morbid Obesity BMI range:"
             rangeModeLbl.font = UIFont(name: rangeModeLbl.font.fontName, size: 20)
+            messageLbl.font = UIFont(name: messageLbl.font.fontName, size: 18)
             rangeValueLbl.text = ranges["superMorbidObesity"]
             messageLbl.text = messages["superMorbidObesity"]
             
