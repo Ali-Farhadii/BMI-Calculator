@@ -8,21 +8,11 @@
 
 import UIKit
 
-enum weightCondition {
-    case underWeight
-    case normal
-    case overWeight
-    case obesity
-    case morbidObesity
-    case superMorbidObesity
-}
-
 class ResultScreen: ViewController {
 
     // Property
     var height = 0.0
     var weight = 0
-    var bmiMode: weightCondition?
     var result = 0.0
     
     var ranges = ["underWeight" : "less than 18.5", "normal" : "18.5 - 24.9", "overWeight" : "25 - 29.9", "obesity" : "30 - 39.9", "morbidObesity" : "40 - 49.9", "superMorbidObesity" : "50 or greater"]
@@ -51,33 +41,27 @@ class ResultScreen: ViewController {
         switch result {
         
         case 0..<18:
-            bmiMode = .underWeight
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Under Weight", color: .systemYellow, result: result, rangeLbl: "Under Weight BMI range:", rangeVlu:"less than 18.5", message: "Comeon! eat more pizza :)")
             break
 
         case 18..<25:
-            bmiMode = .normal
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Normal Weight", color: .systemGreen, result: result, rangeLbl: "Normal Weight BMI range:", rangeVlu:"18.5 - 24.9", message: "You have a normal body weight. Good job!")
             break
             
         case 25..<30:
-            bmiMode = .overWeight
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Over Weight", color: .systemOrange , result: result, rangeLbl: "Over Weight BMI range:", rangeVlu:"25 - 29.9", message: "Look out! You'r going to pass")
             break
             
         case 30..<40:
-            bmiMode = .obesity
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Obesity", color: UIColor(red: 1, green: 0.41, blue: 0.22, alpha: CGFloat(1)), result: result, rangeLbl: "Ovesity BMI range:", rangeVlu:"30 - 39.9", message: "Let's start to be fit")
             break
             
         case 40..<50:
-            bmiMode = .morbidObesity
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Morbid Obesity", color: UIColor(red: 1, green: 0.30, blue: 0.06, alpha: CGFloat(1)), result: result, rangeLbl: "Morbid Obesity BMI range:", rangeVlu:"40 - 49.9", message: "Hey dude! take it serious")
             break
             
         case 50..<100:
-            bmiMode = .superMorbidObesity
-            updateUI(bmiMode: bmiMode!)
+            updateUI(bmiMode: "Super Morbid Obesity", color: .systemRed, result: result, rangeLbl: "Super Morbid Obesity BMI range:", rangeVlu:"50 or greater", message: "Oh My God! you're in dangerous. Please do something")
             break
         
         default:
@@ -85,62 +69,18 @@ class ResultScreen: ViewController {
         }
     }
     
-    func updateUI(bmiMode:weightCondition) {
+    func updateUI(bmiMode:String,color:UIColor,result:Double,rangeLbl:String,rangeVlu:String,message:String) {
      
-        switch bmiMode {
-        
-        case .underWeight:
-            resultModeLbl.text = "Under Weight"
-            resultModeLbl.textColor = .systemYellow
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Under Weight BMI range:"
-            rangeValueLbl.text = ranges["underWeight"]
-            messageLbl.text = messages["underWeight"]
-            
-        case .normal:
-            resultModeLbl.text = "Normal"
-            resultModeLbl.textColor = .systemGreen
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Normal BMI range:"
-            rangeValueLbl.text = ranges["normal"]
-            messageLbl.text = messages["normal"]
-        
-        case .overWeight:
-            resultModeLbl.text = "Over Weight"
-            resultModeLbl.textColor = .systemOrange
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Over Weight BMI range:"
-            rangeValueLbl.text = ranges["overWeight"]
-            messageLbl.text = messages["overWeight"]
-            
-        case .obesity:
-            resultModeLbl.text = "Obesity"
-            resultModeLbl.textColor = UIColor(red: 1, green: 0.41, blue: 0.22, alpha: CGFloat(1))
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Obesity BMI range:"
-            rangeValueLbl.text = ranges["obesity"]
-            messageLbl.text = messages["obesity"]
+        if bmiMode == "Super Morbid Obesity" {
+            rangeModeLbl.font = UIFont(name: rangeModeLbl.font.fontName, size: 18)
+        }
+        resultModeLbl.text = "\(bmiMode)"
+        resultModeLbl.textColor = color
+        resultValueLbl.text = String(format: "%.1f", result)
+        rangeModeLbl.text = "\(rangeLbl)"
+        rangeValueLbl.text = "\(rangeVlu)"
+        messageLbl.text = "\(message)"
 
-        case .morbidObesity:
-            resultModeLbl.text = "Morbid Obesity"
-            resultModeLbl.textColor = UIColor(red: 1, green: 0.30, blue: 0.06, alpha: CGFloat(1))
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Morbid Obesity BMI range:"
-            rangeValueLbl.text = ranges["morbidObesity"]
-            messageLbl.text = messages["morbidObesity"]
-
-        case .superMorbidObesity:
-            resultModeLbl.text = "Super Morbid Obesity"
-            resultModeLbl.textColor = .systemRed
-            resultValueLbl.text = String(format: "%.1f", result)
-            rangeModeLbl.text = "Super Morbid Obesity BMI range:"
-            rangeModeLbl.font = UIFont(name: rangeModeLbl.font.fontName, size: 20)
-            messageLbl.font = UIFont(name: messageLbl.font.fontName, size: 18)
-            rangeValueLbl.text = ranges["superMorbidObesity"]
-            messageLbl.text = messages["superMorbidObesity"]
-            
-        } // End of switch statement
-        
     } // End of updateUI function
 
 } // End of class
