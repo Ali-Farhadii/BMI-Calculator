@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     enum Gender {
         case male
         case feMale
