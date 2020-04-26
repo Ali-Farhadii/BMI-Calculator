@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ou3-0U-hLN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ou3-0U-hLN">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,13 +19,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BMI Calculator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-UG-8E4">
-                                        <rect key="frame" x="86.666666666666686" y="42" width="202" height="41"/>
+                                        <rect key="frame" x="86.666666666666686" y="37" width="202" height="41"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYY-4C-kZz">
-                                        <rect key="frame" x="15.000000000000002" y="52.666666666666664" width="19.666666666666671" height="19.999999999999993"/>
+                                        <rect key="frame" x="15.000000000000002" y="47.666666666666664" width="19.666666666666671" height="19.999999999999993"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="questionmark.circle" catalog="system">
@@ -41,7 +41,7 @@
                                     <constraint firstItem="JPa-UG-8E4" firstAttribute="centerX" secondItem="hb6-8C-CRM" secondAttribute="centerX" id="Ada-CQ-s00"/>
                                     <constraint firstItem="gYY-4C-kZz" firstAttribute="leading" secondItem="hb6-8C-CRM" secondAttribute="leading" constant="15" id="Rg8-NO-cgB"/>
                                     <constraint firstItem="gYY-4C-kZz" firstAttribute="centerY" secondItem="JPa-UG-8E4" secondAttribute="centerY" id="dlm-eR-ob5"/>
-                                    <constraint firstItem="JPa-UG-8E4" firstAttribute="centerY" secondItem="hb6-8C-CRM" secondAttribute="centerY" multiplier="1.25" id="qrQ-A7-Xj4"/>
+                                    <constraint firstItem="JPa-UG-8E4" firstAttribute="centerY" secondItem="hb6-8C-CRM" secondAttribute="centerY" multiplier="1.15" id="qrQ-A7-Xj4"/>
                                     <constraint firstAttribute="height" constant="100" id="yxV-gz-5d9"/>
                                 </constraints>
                             </view>
@@ -60,132 +60,110 @@
                                     <segue destination="Gxd-2S-pER" kind="show" identifier="resultSegue" id="HmX-oc-ltC"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="nAF-GZ-4b6" userLabel="Weight Age Stack View">
-                                <rect key="frame" x="3" y="521.66666666666663" width="369.33333333333331" height="134"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="nAF-GZ-4b6" userLabel="Weight Age Stack View">
+                                <rect key="frame" x="3" y="458.66666666666674" width="369.33333333333331" height="260.33333333333326"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-yS-qjI" userLabel="Weight Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="149.66666666666666" height="134"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Es5-yS-qjI" userLabel="Weight Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="154.66666666666666" height="260.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pn-TA-bKj">
-                                                <rect key="frame" x="32.999999999999993" y="0.0" width="83.333333333333314" height="41.333333333333336"/>
+                                                <rect key="frame" x="35.666666666666664" y="0.0" width="83.333333333333343" height="130.33333333333334"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-OS-djF">
-                                                <rect key="frame" x="50" y="46.333333333333371" width="49.333333333333343" height="41.333333333333343"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="FLU-jE-dRi" userLabel="Change Stack View">
-                                                <rect key="frame" x="37.333333333333343" y="92.666666666666742" width="75" height="41.333333333333343"/>
-                                                <subviews>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbW-0g-Z6C">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="41.333333333333336"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                        <state key="normal" title="+">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="weightBtns:" destination="ou3-0U-hLN" eventType="touchUpInside" id="lnw-F1-Kyd"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qn-Pf-SOH">
-                                                        <rect key="frame" x="44.999999999999993" y="0.0" width="30.000000000000007" height="41.333333333333336"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                                        <state key="normal" title="-">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="weightBtns:" destination="ou3-0U-hLN" eventType="touchUpInside" id="sSN-Yc-1Hr"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QA5-cX-pdY">
+                                                <rect key="frame" x="37.333333333333343" y="130.33333333333331" width="80" height="130"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="Tvn-xb-Ri4"/>
+                                                    <constraint firstAttribute="width" constant="80" id="raU-q1-csL"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ou3-0U-hLN" id="MtV-wX-s04"/>
+                                                    <outlet property="delegate" destination="ou3-0U-hLN" id="brW-1l-Rmq"/>
+                                                </connections>
+                                            </pickerView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" id="fok-ba-IyU" userLabel="Age Stack View">
-                                        <rect key="frame" x="219.66666666666669" y="0.0" width="149.66666666666669" height="134"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" id="fok-ba-IyU" userLabel="Age Stack View">
+                                        <rect key="frame" x="214.66666666666669" y="0.0" width="154.66666666666669" height="260.33333333333331"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-Yu-hSO">
-                                                <rect key="frame" x="50.666666666666657" y="0.0" width="48" height="41.333333333333336"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-Yu-hSO">
+                                                <rect key="frame" x="53.333333333333343" y="0.0" width="48" height="130.33333333333334"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5u-TG-Tjt">
-                                                <rect key="frame" x="50.000000000000028" y="46.333333333333371" width="49.333333333333343" height="41.333333333333343"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-Zp-YVp" userLabel="Change Stack View">
-                                                <rect key="frame" x="37.333333333333343" y="92.666666666666742" width="75" height="41.333333333333343"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlj-gC-kba">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="41.333333333333336"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                        <state key="normal" title="+">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="ageBtns:" destination="ou3-0U-hLN" eventType="touchUpInside" id="MmP-kK-x0n"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igm-EX-5va">
-                                                        <rect key="frame" x="45" y="0.0" width="30" height="41.333333333333336"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                                        <state key="normal" title="-">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="ageBtns:" destination="ou3-0U-hLN" eventType="touchUpInside" id="Fkt-bT-Qgf"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBa-dn-gMg">
+                                                <rect key="frame" x="37.333333333333343" y="130.33333333333331" width="80" height="130"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="130" id="WSa-6f-hzt"/>
+                                                    <constraint firstAttribute="width" constant="80" id="hLi-qF-L3z"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="ou3-0U-hLN" id="Bbd-KT-v76"/>
+                                                    <outlet property="delegate" destination="ou3-0U-hLN" id="EdS-ox-eZ8"/>
+                                                </connections>
+                                            </pickerView>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="Ivc-GG-kzz"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ADM-5Q-IY1" userLabel="Gender Stack View">
-                                <rect key="frame" x="25" y="128" width="325" height="150"/>
+                                <rect key="frame" x="25" y="95.333333333333329" width="325" height="174.66666666666669"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI0-a3-EeB">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="7Ab-iB-uK4"/>
-                                            <constraint firstAttribute="height" constant="150" id="kvJ-62-goa"/>
-                                        </constraints>
-                                        <state key="normal" image="Male">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="maleBtn:" destination="ou3-0U-hLN" eventType="touchUpInside" id="gqK-1U-UOs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-m4-uyb">
-                                        <rect key="frame" x="175" y="0.0" width="150" height="150"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="8Aa-hv-EkW"/>
-                                            <constraint firstAttribute="width" constant="150" id="N9P-WM-fLq"/>
-                                        </constraints>
-                                        <state key="normal" image="Female">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="femaleBtn:" destination="ou3-0U-hLN" eventType="touchUpInside" id="YXR-Vf-UAD"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JkG-Ic-JEU">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="174.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI0-a3-EeB">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="7Ab-iB-uK4"/>
+                                                    <constraint firstAttribute="height" constant="150" id="kvJ-62-goa"/>
+                                                </constraints>
+                                                <state key="normal" image="Male">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="maleBtn:" destination="ou3-0U-hLN" eventType="touchUpInside" id="gqK-1U-UOs"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDS-rz-v1t">
+                                                <rect key="frame" x="56.666666666666671" y="150" width="36.666666666666671" height="24.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-Wp-X9D">
+                                        <rect key="frame" x="175" y="0.0" width="150" height="174.66666666666666"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9y-m4-uyb">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="8Aa-hv-EkW"/>
+                                                    <constraint firstAttribute="width" constant="150" id="N9P-WM-fLq"/>
+                                                </constraints>
+                                                <state key="normal" image="Female">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="femaleBtn:" destination="ou3-0U-hLN" eventType="touchUpInside" id="YXR-Vf-UAD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m31-mb-qHI">
+                                                <rect key="frame" x="42.666666666666657" y="150" width="65" height="24.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="20X-7X-Cay" userLabel="Height Stack View">
@@ -235,7 +213,7 @@
                             <constraint firstItem="nAF-GZ-4b6" firstAttribute="centerX" secondItem="irb-dl-zkt" secondAttribute="centerX" id="b0A-Rt-h5Y"/>
                             <constraint firstItem="F61-SG-xLW" firstAttribute="bottom" secondItem="58P-8m-PKK" secondAttribute="bottom" constant="-10" id="bre-d3-cWj"/>
                             <constraint firstItem="hb6-8C-CRM" firstAttribute="centerX" secondItem="irb-dl-zkt" secondAttribute="centerX" id="cKP-Tl-fJi"/>
-                            <constraint firstItem="ADM-5Q-IY1" firstAttribute="centerY" secondItem="irb-dl-zkt" secondAttribute="centerY" multiplier="0.5" id="dEa-Fi-hbL"/>
+                            <constraint firstItem="ADM-5Q-IY1" firstAttribute="centerY" secondItem="irb-dl-zkt" secondAttribute="centerY" multiplier="0.45" id="dEa-Fi-hbL"/>
                             <constraint firstItem="nAF-GZ-4b6" firstAttribute="centerY" secondItem="irb-dl-zkt" secondAttribute="centerY" multiplier="1.45" id="eS9-os-ygq"/>
                             <constraint firstItem="hb6-8C-CRM" firstAttribute="top" secondItem="irb-dl-zkt" secondAttribute="top" id="lYg-56-SZH"/>
                             <constraint firstItem="ADM-5Q-IY1" firstAttribute="centerX" secondItem="irb-dl-zkt" secondAttribute="centerX" id="uFu-F3-3Ji"/>
@@ -245,11 +223,11 @@
                         <viewLayoutGuide key="safeArea" id="58P-8m-PKK"/>
                     </view>
                     <connections>
-                        <outlet property="ageLbl" destination="h5u-TG-Tjt" id="gv2-RE-vKT"/>
+                        <outlet property="agePickerView" destination="eBa-dn-gMg" id="fJS-7L-dnN"/>
                         <outlet property="feMaleLbl" destination="p9y-m4-uyb" id="xBs-9h-eIc"/>
                         <outlet property="heightLbl" destination="nuA-ow-mAm" id="zvC-Mb-tAN"/>
                         <outlet property="maleLbl" destination="yI0-a3-EeB" id="7Uq-WT-ETJ"/>
-                        <outlet property="weightLbl" destination="E5D-OS-djF" id="X0f-dU-UkU"/>
+                        <outlet property="weightPickerView" destination="QA5-cX-pdY" id="xLa-fJ-zmp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIc-Qo-gEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -560,6 +538,6 @@
         <image name="Female" width="100" height="100"/>
         <image name="Male" width="100" height="100"/>
         <image name="icons8-back_to" width="100" height="100"/>
-        <image name="questionmark.circle" catalog="system" width="64" height="60"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>

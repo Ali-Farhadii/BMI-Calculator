@@ -15,10 +15,6 @@ class ResultScreen: ViewController {
     var weight = 0
     var result = 0.0
     
-    var ranges = ["underWeight" : "less than 18.5", "normal" : "18.5 - 24.9", "overWeight" : "25 - 29.9", "obesity" : "30 - 39.9", "morbidObesity" : "40 - 49.9", "superMorbidObesity" : "50 or greater"]
-    
-    var messages = ["underWeight" : "Comeon! eat more pizza :)", "normal" : "You have a normal body weight. Good job!", "overWeight" : "Look out! You'r going to pass", "obesity" : "Let's start to be fit", "morbidObesity" : "Hey dude! take it serious", "superMorbidObesity" : "Oh My God! you're in dangerous. Please do something"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +30,8 @@ class ResultScreen: ViewController {
     
     func calculateBMI() {
         
+        // Calculate BMI range
         let dividedHeight = Double(height / 100)
-        
         result = (Double(weight) / (dividedHeight * dividedHeight))
         
         switch result {
