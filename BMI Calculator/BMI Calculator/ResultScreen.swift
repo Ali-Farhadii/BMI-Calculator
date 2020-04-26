@@ -30,8 +30,8 @@ class ResultScreen: ViewController {
     
     func calculateBMI() {
         
+        // Calculate BMI range
         let dividedHeight = Double(height / 100)
-        
         result = (Double(weight) / (dividedHeight * dividedHeight))
         
         switch result {
